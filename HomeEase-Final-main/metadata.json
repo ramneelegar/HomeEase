@@ -1,0 +1,6 @@
+{
+  "name": "Homease",
+  "description": "An exquisite home service finder, directory, and real-time appointment coordinator connecting clients with vetted carpenters, plumbers, cleaners, and appliance experts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
