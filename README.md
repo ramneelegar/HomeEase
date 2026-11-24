@@ -1,114 +1,268 @@
-🏠 HomeEase – Household Services Marketplace
-A full-featured demo web app built with React, inspired by Urban Company. Built as a DBMS project.
+# 🏠 HomeEase – Household Services Marketplace
 
-🚀 Quick Start
-Prerequisites
-Node.js v16+ installed (download)
-npm (comes with Node.js)
-Run Locally
-# 1. Navigate into the project folder
-cd homease
+**HomeEase** is a household services marketplace web application inspired by Urban Company. It connects customers with trusted service providers for everyday household needs. Users can browse services, compare providers, book appointments, track bookings, and communicate with service providers.
 
-# 2. Install dependencies
+Built as a **Database Management Systems (DBMS) Project** using React.
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v16 or later)
+- npm (comes with Node.js)
+- Git
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/ramneelegar/HomeEase.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd HomeEase
+```
+
+**3. Install dependencies**
+
+```bash
 npm install
+```
 
-# 3. Start the development server
+**4. Start the development server**
+
+```bash
 npm start
-App opens at http://localhost:3000
+```
 
-🔑 Demo Login Credentials
-Role	Email	Password
-Customer	customer@homease.com	password
-Provider	arjun@homease.com	password
-Provider	kavitha@homease.com	password
-Admin	admin@homease.com	admin123
-🗂️ Folder Structure
-homease/
+**5. Open the application**
+
+Visit:
+
+http://localhost:3000
+
+---
+
+## 🔑 Demo Login Credentials
+
+Use the following credentials to explore different user roles.
+
+| Role | Email | Password |
+|---|---|---|
+| Customer | customer@homease.com | password |
+| Provider | arjun@homease.com | password |
+| Provider | kavitha@homease.com | password |
+| Admin | admin@homease.com | admin123 |
+
+---
+
+## 🗂️ Project Structure
+
+```text
+HomeEase/
+│
 ├── public/
 │   └── index.html
+│
 ├── src/
-│   ├── App.js                    # Main app with routing
-│   ├── index.js                  # Entry point
-│   ├── index.css                 # Global styles & design system
+│   │
+│   ├── App.js
+│   ├── index.js
+│   ├── index.css
+│   │
 │   ├── context/
-│   │   └── AppContext.js         # Global state (auth, bookings, chat, notifications)
+│   │   └── AppContext.js
+│   │
 │   ├── data/
-│   │   └── mockData.js           # Pre-loaded providers, customers, bookings
+│   │   └── mockData.js
+│   │
 │   ├── pages/
-│   │   └── AuthPages.js          # Login & Signup
+│   │   └── AuthPages.js
+│   │
 │   └── components/
+│       │
 │       ├── shared/
-│       │   └── Shared.js         # Navbar, Avatar, Notifications, StarRating, etc.
+│       │   └── Shared.js
+│       │
 │       ├── customer/
-│       │   ├── CustomerHome.js   # Browse, search, filters, recommendations
-│       │   ├── ProviderProfile.js # Provider view + booking modal + reviews
-│       │   ├── CustomerBookings.js # My bookings page
-│       │   └── CustomerProfile.js  # Customer profile edit
+│       │   ├── CustomerHome.js
+│       │   ├── ProviderProfile.js
+│       │   ├── CustomerBookings.js
+│       │   └── CustomerProfile.js
+│       │
 │       ├── provider/
-│       │   └── ProviderPages.js  # Dashboard, bookings management, profile edit
+│       │   └── ProviderPages.js
+│       │
 │       ├── chat/
-│       │   └── ChatPage.js       # Real-time-like chat with localStorage persistence
+│       │   └── ChatPage.js
+│       │
 │       └── admin/
-│           └── AdminPanel.js     # Admin dashboard with user/booking management
+│           └── AdminPanel.js
+│
 └── package.json
-✅ Features Implemented
-Authentication
-Login / Signup with role selection (Customer / Provider)
-Session persistence via localStorage
-Role-based route protection and redirects
-Customer Module
-Browse service categories (Plumbing, Electrical, Cleaning, Carpentry, Painting, Appliance Repair)
-Search by name, service, or location
-Filter by rating, price, and location
-View provider profiles with portfolio, reviews, availability
-Book services with date/time/address selection
-Track bookings (Requested → Accepted → Completed)
-Write reviews after completed bookings
-Provider Module
-Dashboard with stats (pending, active, completed, earnings)
-Accept / Reject / Complete booking requests
-Edit full profile (bio, pricing, category, location, etc.)
-View and respond to bookings
-Chat System
-Real-time-like messaging between customer and provider
-Messages persist via localStorage
-Timestamps, sender/receiver distinction
-Auto-scroll to latest messages
-Quick reply suggestions
-Notification System
-Bell icon with unread count badge
-Notifications for: booking request, accepted, rejected, completed, new message
-Read/unread state management
-Dropdown with notification history
-Smart Recommendations
-Recommends providers based on past searches and booking history
-Falls back to top-rated providers
-Admin Panel
-Overview with platform stats and category breakdown
-Manage all providers (verify/unverify)
-View all customers
-View all bookings with status
-Data Persistence
-All data (users, bookings, messages, notifications) stored in localStorage
-Persists across page refresh
-🎨 Tech Stack
-Layer	Tech
-Frontend	React 18 (functional components + hooks)
-Routing	React Router v6
-State	Context API + localStorage
-Styling	Pure CSS with CSS Variables (no framework)
-Icons	Unicode emoji
-Fonts	Fraunces (display) + Plus Jakarta Sans (body)
-Images	Unsplash (mock portfolio images)
-📊 Mock Data Included
-6 Providers – One for each service category, with ratings, reviews, portfolio, and availability
-1 Demo Customer – With past bookings and search history
-Sample Bookings – In different statuses for demonstration
-Chat Messages – Pre-loaded conversation
-Notifications – Sample read/unread notifications
-🧩 How to Add Real Database (for production upgrade)
-Replace mockData.js with API calls to a Node.js/Express backend
-Replace localStorage in AppContext.js with fetch() calls to REST endpoints
-Add MongoDB/MySQL/PostgreSQL with the same data schema
-Add JWT-based authentication
-Built for DBMS Project Demo | HomeEase v1.0
+```
+
+---
+
+## ✨ Features Implemented
+
+### 1. 🔐 Authentication System
+
+- Login and Signup functionality.
+- Role selection (Customer / Provider).
+- Session persistence using localStorage.
+- Role-based route protection.
+- Automatic redirects based on user roles.
+
+### 2. 👤 Customer Module
+
+- Browse household service categories:
+  - Plumbing
+  - Electrical
+  - Cleaning
+  - Carpentry
+  - Painting
+  - Appliance Repair
+- Search providers by name, service, or location.
+- Filter providers by rating, price, and location.
+- View provider profiles, portfolios, reviews, and availability.
+- Book services by selecting date, time, and address.
+- Track booking status:
+  - Requested
+  - Accepted
+  - Completed
+- Submit reviews after completed bookings.
+
+### 3. 🛠️ Provider Module
+
+- Dedicated provider dashboard.
+- View booking statistics:
+  - Pending bookings
+  - Active bookings
+  - Completed bookings
+  - Total earnings
+- Accept or reject booking requests.
+- Mark bookings as completed.
+- Edit provider profile, including bio, pricing, category, and location.
+- View and respond to customer bookings.
+
+### 4. 💬 Chat System
+
+- Real-time-like messaging between customers and providers.
+- Messages persist using localStorage.
+- Display message timestamps.
+- Differentiate sender and receiver messages.
+- Automatic scrolling to the latest message.
+- Quick reply suggestions.
+
+### 5. 🔔 Notification System
+
+- Notification bell with unread count.
+- Booking request notifications.
+- Booking acceptance and rejection notifications.
+- Booking completion notifications.
+- New message notifications.
+- Read/unread notification management.
+- Dropdown notification history.
+
+### 6. 🤖 Smart Recommendations
+
+- Recommends providers based on previous searches.
+- Uses booking history to improve recommendations.
+- Falls back to top-rated providers when history is unavailable.
+
+### 7. 🛡️ Admin Panel
+
+- Dashboard with platform statistics.
+- Category-wise breakdown.
+- Manage all service providers.
+- Verify or unverify providers.
+- View registered customers.
+- Monitor all bookings and their statuses.
+
+### 8. 💾 Data Persistence
+
+- User information stored in localStorage.
+- Booking information persists across refreshes.
+- Chat messages are saved locally.
+- Notifications maintain read/unread status.
+- Application data persists across page refreshes.
+
+---
+
+## 🎨 Technology Stack
+
+| Layer | Technologies |
+|---|---|
+| Frontend | React 18 |
+| Programming Language | JavaScript |
+| Routing | React Router v6 |
+| State Management | Context API |
+| Data Persistence | Browser localStorage |
+| Styling | Pure CSS |
+| Icons | Unicode Emojis |
+| Fonts | Fraunces, Plus Jakarta Sans |
+| Images | Unsplash |
+
+---
+
+## 📊 Sample Data
+
+The application includes pre-loaded demonstration data:
+
+- **6 Service Providers** – One for each service category, with ratings, reviews, portfolios, and availability.
+- **1 Demo Customer** – Includes previous bookings and search history.
+- **Sample Bookings** – Bookings in different statuses.
+- **Chat Messages** – Pre-loaded conversations for demonstration.
+- **Notifications** – Sample read and unread notifications.
+
+---
+
+## 🔮 Future Enhancements
+
+The current application uses mock data and localStorage for demonstration purposes.
+
+The following improvements can be implemented for a production-ready application:
+
+1. Develop a Node.js and Express backend.
+2. Integrate MongoDB, MySQL, or PostgreSQL.
+3. Replace localStorage with REST API integration.
+4. Implement JWT-based authentication.
+5. Add secure password hashing.
+6. Integrate real-time communication using WebSockets.
+7. Implement online payment integration.
+8. Add real-time booking and provider availability updates.
+
+---
+
+## 🎯 Project Information
+
+| Detail | Description |
+|---|---|
+| Project Name | HomeEase |
+| Project Type | DBMS Project |
+| Application Type | Household Services Marketplace |
+| Frontend | React.js |
+| Version | 1.0 |
+| Inspiration | Urban Company |
+
+---
+
+## 👨‍💻 Developed By
+
+**Ramachandrappa Neelegar**
+
+GitHub: [ramneelegar](https://github.com/ramneelegar)
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star!
