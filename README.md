@@ -259,7 +259,7 @@ The following improvements can be implemented for a production-ready application
 
 ## 👨‍💻 Developed By
 
-Developed as part of the DBMS Project by: Ramachandrappa, Rakesh Tawarger, Ramangouda
+Developed as part of the DBMS Project by: Ramachandrappa, Rakesh Tawargeri, Ramangouda
 
 
 GitHub: [ramneelegar](https://github.com/ramneelegar)
